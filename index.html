@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+    
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- Material Design Bootstrap -->
+     <link href="css/mdb.min.css" rel="stylesheet">
+     <!-- Your custom styles (optional) -->
+     <link href="css/main.css" rel="stylesheet">
+
+     <!-- JQuery -->
+     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include the AngularJS and Bootstrap library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+  <body ng-app="pokedex">
+
+      <nav class="navbar navbar-light blue-grey lighten-5">
+          <a class="navbar-brand" href="#">
+              <img src="img/pokemon.png" height="50" alt="">
+          </a>
+      </nav>            
+     
+      <div class="col d-flex justify-content-center" id="mainCard" ng-controller="MainController">
+        <div class="card" style="width: 22rem;">
+            <div class="card-header grey text-center">
+
+              <img ng-src="{{picture}}" width="150px" height="150px">
+                
+            </div>
+           
+            <div class="card-body">
+              <p class="card-title text-center text-capitalize" id="nome"> {{ pokedado }} </p>
+              <div>
+                
+                <p>Peso:  {{ peso }} lb </p>
+                <p>Habilidade 1:  {{ hab1 }}</p>
+                <p>Habilidade 2:  {{ hab2 }}</p>
+                <p>Tipo:  {{ tipo }} </p>
+
+              </div>
+              
+              <div class="text-center" id="botoes">
+                <a class="btn blue btn-md" ng-click="minusOne()">Anterior</a> 
+                <a class="btn blue btn-md" ng-click="plusOne()">Próximo</a>
+                  
+              </div>
+              
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+
+  </body>
+</html>
